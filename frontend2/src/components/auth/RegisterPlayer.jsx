@@ -17,7 +17,7 @@ function RegisterPlayer() {
     // A validação de campos obrigatórios já é feita pelo atributo 'required' nos inputs.
     // Se a chamada à API for bem-sucedida, o formulário prossegue.
     try {
-      const response = await fetch('http://localhost:3000/api/auth/register', { 
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
